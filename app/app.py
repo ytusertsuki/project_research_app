@@ -17,7 +17,6 @@ def home():
 @math_app.route("/plot", methods=['GET', "POST"])
 def plot():
     if request.method == 'GET':
-        print("Route /plot accessed")
         return render_template("plot_index.html")
     
     
@@ -56,6 +55,49 @@ def plot():
         )
 
 
-# #平均計算画面
-# @math_app.route("/Mean")
+#平均計算画面
+@math_app.route("/mean", methods=['GET', "POST"])
+def mean():
+    if request.method == 'POST':
+        #初期値
+        results = {
+            "mean": None,
+            "mode": None,
+            "var": None,
+            "stdev": None
+        }
+        #入力された数字を受け取る
+        values = request.form['number']
+        try:
+            #入力されたフォームを_で要素に分ける
+            values_list = [int(value) for value in values.split()]
+            #チェックされたボックスのvalueを得る
+            selected_metrics = request.form.getlist('check')
+            print(selected_metrics)
+            if 'mean' in selected_metrics:
+                results["mean"] = calc_mean(values_list)
+            else:
+                results["mean"] = ""
+
+            if 'mode' in selected_metrics:    
+                results["mode"] = calc_mode(values_list)
+            else:
+                results["mode"] = ""
+            
+            if 'var' in selected_metrics:    
+                results["var"] = calc_var(values_list)
+            else:
+                results["var"] = ""
+
+            if 'stdev' in selected_metrics:    
+                results["stdev"] = calc_stdev(values_list)
+            else:
+                results["stdev"] = ""
+            print(results)
+            return render_template("index.html",A=results["mean"],B=results["mode"],C=results["var"],D=results["stdev"],valueErrorMessage="")
+
+        except ValueError as e:
+            print(f"ValueErrorが発生しました: {e}")
+            valueErrorMessage = '※数字を入力してください'
+            return render_template("index.html", valueErrorMessage= valueErrorMessage)
 

@@ -1,3 +1,4 @@
+import statistics
 #リストの平均値を求める
 def calc_mean(list):
     Mean = sum(list)/len(list)

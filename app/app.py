@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
-
+from app.function.mean_calc import calc_mean ,calc_mode,calc_stdev,calc_var
 
 math_app = Flask(__name__)
 
@@ -104,3 +104,5 @@ def mean():
             valueErrorMessage = '※数字を入力してください'
             return render_template("mean_index.html", valueErrorMessage= valueErrorMessage)
 
+#お問い合わせ画面
+@math_app.route("/contact", methods=['GET', "POST"])

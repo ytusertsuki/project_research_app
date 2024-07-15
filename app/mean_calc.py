@@ -14,3 +14,4 @@ def calc_var(list):
 #リストの標準偏差を求める
 def calc_stdev(list):
     return statistics.stdev(list)
+

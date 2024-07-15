@@ -2,16 +2,17 @@
 {% block content %}
     <header>
         <p class="web_link_waku">
-            <a href="{{ url_for('home') }}" class="btn-logo">
-                | HOME |
-            </a>
-            <a href="mean_index.html" class="btn-logo">
-                | 平均計算サイト |
-            </a>
-            <a href="{{ url_for('plot') }}" class="btn-logo">
-                | PLOT |
-            </a>
-            
+            <p class="web_link_waku">
+                <a href="{{ url_for('home') }}"  class="btn-logo">
+                    | HOME |
+                </a>
+                <a href="{{ url_for('mean') }}" class="btn-logo">
+                    | 平均計算サイト |
+                </a>
+                <a href="{{ url_for('plot') }}" class="btn-logo">
+                    | PLOT |
+                </a>
+            </p>
         </p>
     </header>
 {% endblock %}

@@ -1,0 +1,50 @@
+{% extends "basic.html"%}
+{% block content %}
+    <!-- ヘッダー -->
+    <header>
+        <p class="web_link_waku">
+            <a href="home.html" class="btn-logo">
+                | HOME |
+            </a>
+            <a href="mean_index.html" class="btn-logo">
+                | 平均計算サイト |
+            </a>
+            <a href="plot_index.html" class="btn-logo">
+                | PLOT |
+            </a>
+        </p>
+    </header>
+    <!-- サイトの使い方説明 -->
+<div>
+    <p class="midashi">平均計算サイトとは？</p>
+    <p>平均計算サイトでは、入力欄に数値を複数入力することで、その数値群の平均値、最頻値、分散、標準偏差を表示することができます。</p>
+</div>
+<div class="sousa-houhou">
+    <span class="box-title">操作方法</span>
+<div class="gyoukan_tikadukeru">
+    <p>1.入力欄に計算したい数値群を半角で入力する。数値と数値の間は半角スペースで区切る。</p>
+    <p>2.入力欄の下側にあるチェックボックスのうち、求めたい内容のチェックボックスにチェックを入れる。</p>
+    <p>3.入力欄の右側にある、「計算結果を表示」と書かれたボタンをクリックする。</p>
+    <p class="hidari-hasenn">例：[1,2,3,4,5]の平均値と分散を表示したい場合</p>
+    <p>1.入力欄に「1 2 3 4 5」と入力する。</p>
+    <p>2.「平均値を表示する」と「分散を表示する」のチェックボックスにチェックを入れる。</p>
+    <p>3.「計算結果を表示」と書かれたボタンをクリックすると、平均値と分散が表示される。</p>
+</div>
+</div>
+    <!-- 入力フォーム    -->
+    <div>
+        <form method = "post" action="/calc">
+            <textarea name="number" id="number"></textarea>
+            <label><input type="checkbox" name = 'check' value = 'mean'>平均を求める</label>
+            <label><input type="checkbox" name = 'check' value = 'mode'>最頻値を求める</label>
+            <label><input type="checkbox" name = 'check' value = 'var'>分散を求める</label>
+            <label><input type="checkbox" name = 'check' value = 'stdev'>標準偏差を求める</label>
+            <button type ="submit">計算</button>
+        </form>
+        <p id = ValueError>{{valueErrorMessage}}</p>
+        <p>平均は{{A}}</p>
+        <p>最頻値は{{B}}</p>
+        <p>分散は{{C}}</p>
+        <p>標準偏差は{{D}}</p>
+    </div>
+{% endblock %}

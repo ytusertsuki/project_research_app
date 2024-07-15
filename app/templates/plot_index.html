@@ -1,0 +1,38 @@
+{% extends "basic.html"%}
+{% block content %}
+    <header>
+        <p class="web_link_waku">
+            <a href="{{ url_for('home') }}"  class="btn-logo">
+                | HOME |
+            </a>
+            <a href="mean_index.html" class="btn-logo">
+                | 平均計算サイト |
+            </a>
+            <a href="{{ url_for('plot') }}" class="btn-logo">
+                | PLOT |
+            </a>
+        </p>
+    </header>
+    <h1>数式プロット</h1>
+    <!-- 入力フォーム -->
+        <form action="/plot" method="POST" enctype="multipart/form-data">
+            <table border="1">
+                <tr>
+                    <th>ファイル</th>
+                    <th>行</th>
+                    <th>列指定～</th>
+                    <th>～列指定</th>
+                </tr>
+                <tr>
+                    <td><input type="file" name="file_data"></td>
+                    <td><input type="text" name="calum"></td>
+                    <td><input type="text" name="retu_s"></td>
+                    <td><input type="text" name="retu_e"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="送信">
+            <br>
+            <img src = "data:image/png;base64,{{data}}" alt = "nodata">
+        </form>
+{% endblock %}

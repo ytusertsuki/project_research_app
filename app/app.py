@@ -105,4 +105,10 @@ def mean():
             return render_template("mean_index.html", valueErrorMessage= valueErrorMessage)
 
 #お問い合わせ画面
-@math_app.route("/contact", methods=['GET', "POST"])
+@math_app.route("/contact", methods=['GET'])
+def contact():
+    if request.method == 'GET':
+        return render_template("contact.html")
+    return render_template("contact.html")
+
+    

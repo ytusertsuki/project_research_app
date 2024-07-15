@@ -14,6 +14,23 @@
         </p>
     </header>
     <h1>数式プロット</h1>
+    <div>
+        <p class="midashi">平均計算サイトとは？</p>
+        <p>平均計算サイトでは、入力欄に数値を複数入力することで、その数値群の平均値、最頻値、分散、標準偏差を表示することができます。</p>
+    </div>
+    <div class="sousa-houhou">
+        <span class="box-title">操作方法</span>
+        <div class="gyoukan_tikadukeru">
+            <p>1.入力欄に計算したい数値群を半角で入力する。数値と数値の間は半角スペースで区切る。</p>
+            <p>2.入力欄の下側にあるチェックボックスのうち、求めたい内容のチェックボックスにチェックを入れる。</p>
+            <p>3.入力欄の右側にある、「計算結果を表示」と書かれたボタンをクリックする。</p>
+            <p class="hidari-hasenn">例：[1,2,3,4,5]の平均値と分散を表示したい場合</p>
+            <p>1.入力欄に「1 2 3 4 5」と入力する。</p>
+            <p>2.「平均値を表示する」と「分散を表示する」のチェックボックスにチェックを入れる。</p>
+            <p>3.「計算結果を表示」と書かれたボタンをクリックすると、平均値と分散が表示される。</p>
+        </div>
+    </div>
+
     <!-- 入力フォーム -->
         <form action="/plot" method="POST" enctype="multipart/form-data">
             <table border="1">
@@ -35,4 +52,5 @@
             <br>
             <img src = "data:image/png;base64,{{data}}" alt = "nodata">
         </form>
+        <link rel="stylesheet" href="{{ url_for('static', filename='plot_style.css') }}">
 {% endblock %}

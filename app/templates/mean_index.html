@@ -33,7 +33,7 @@
 </div>
     <!-- 入力フォーム    -->
     <div>
-        <form method = "post" action="/calc">
+        <form method = "post" action="/mean">
             <textarea name="number" id="number"></textarea>
             <label><input type="checkbox" name = 'check' value = 'mean'>平均を求める</label>
             <label><input type="checkbox" name = 'check' value = 'mode'>最頻値を求める</label>
@@ -47,4 +47,5 @@
         <p>分散は{{C}}</p>
         <p>標準偏差は{{D}}</p>
     </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='average_style.css') }}">
 {% endblock %}

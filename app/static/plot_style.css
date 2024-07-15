@@ -1,0 +1,92 @@
+h1{
+    color:rgb(22, 122, 165);
+    font-family:游ゴシック;
+    text-align:center;
+    background-color: rgb(134, 212, 245);
+}
+
+.output_form{
+    text-align:center;
+}
+
+textarea{
+    width: 50%;
+    height: 50px;
+}
+
+.gyoukan_tikadukeru{
+    line-height: 1;
+}
+
+.web_link_waku{
+    border-style:solid;
+    border-color:rgb(47, 47, 188);
+}
+
+.btn-logo{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #5095da;
+    transition: .4s;
+}
+
+.btn-logo:hover{
+    background: #25609b;
+}
+
+.midashi{
+    padding: 1rem 1rem;
+    border-left: 5px solid rgb(47, 47, 188);
+    background: rgb(227, 246, 255);
+    display: inline-block;
+}
+
+.sousa-houhou{
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px rgb(47, 47, 188);
+    border-radius: 8px;
+    display: inline-block;
+}
+.sousa-houhou .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: rgb(47, 47, 188);
+    font-weight: bold;
+}
+
+.hidari-hasenn{
+    padding: 1rem 1rem;
+    border-left: 3px dashed #000;
+}
+
+.go_top{
+    right: 50px;
+    bottom: 50px;
+}
+
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    background: #fff;
+    color: #737373;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px -6px rgba(0,0,0,.5), 0 3px 10px -4px rgba(0,0,0,.2);
+    scroll-behavior: smooth;
+}

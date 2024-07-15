@@ -58,6 +58,9 @@ def plot():
 #平均計算画面
 @math_app.route("/mean", methods=['GET', "POST"])
 def mean():
+    if request.method == 'GET':
+        return render_template("mean_index.html")
+
     if request.method == 'POST':
         #初期値
         results = {
@@ -94,10 +97,10 @@ def mean():
             else:
                 results["stdev"] = ""
             print(results)
-            return render_template("index.html",A=results["mean"],B=results["mode"],C=results["var"],D=results["stdev"],valueErrorMessage="")
+            return render_template("mean_index.html",A=results["mean"],B=results["mode"],C=results["var"],D=results["stdev"],valueErrorMessage="")
 
         except ValueError as e:
             print(f"ValueErrorが発生しました: {e}")
             valueErrorMessage = '※数字を入力してください'
-            return render_template("index.html", valueErrorMessage= valueErrorMessage)
+            return render_template("mean_index.html", valueErrorMessage= valueErrorMessage)
 

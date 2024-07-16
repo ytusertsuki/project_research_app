@@ -109,6 +109,6 @@ def mean():
 def contact():
     if request.method == 'GET':
         return render_template("contact.html")
-    return render_template("contact.html")
+
 
     

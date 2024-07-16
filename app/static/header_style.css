@@ -1,0 +1,26 @@
+h1{
+    color:rgb(22, 122, 165);
+    font-family:游ゴシック;
+    text-align:center;
+    background-color: rgb(134, 212, 245);
+}
+
+.btn-logo{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #5095da;
+    transition: .4s;
+}
+
+.web_link_waku{
+    border-style:solid;
+    border-color:rgb(47, 47, 188);
+}
+
+.btn-logo:hover{
+    background: #25609b;
+}

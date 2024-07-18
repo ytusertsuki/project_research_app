@@ -50,7 +50,7 @@ def plot():
         data = base64.b64encode(io.getbuffer()).decode("ascii")
 
         return render_template(
-            'index.html',
+            'plot_index.html',
             data = data
         )
 

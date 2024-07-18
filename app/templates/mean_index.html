@@ -44,10 +44,21 @@
             <button type ="submit">計算</button>
         </form>
         <p id = ValueError>{{valueErrorMessage}}</p>
-        <p>平均は{{A}}</p>
-        <p>最頻値は{{B}}</p>
-        <p>分散は{{C}}</p>
-        <p>標準偏差は{{D}}</p>
+        <div class="result">
+            <table border="1">
+                <tr>
+                    <th>平均値</th><th>{{A}}</th>
+                </tr>
+                <tr>
+                    <th>最頻値</th><th>{{B}}</th>
+                </tr>
+                <tr>
+                    <th>分散</th><th>{{C}}</th>
+                </tr>
+                <tr>
+                    <th>標準偏差</th><th>{{D}}</th>
+                </tr>
+        </div>
     </div>
     <footer>
         <a href="#" id="page-top">

@@ -16,7 +16,26 @@
             </p>
         </p>
     </header>
-    <h1>HOME</h1>
+    <div>
+        <h1>HOME</h1>
+        <p class="midashi">（アプリ名）とは？</p>
+        <p>（アプリ名）では、平均値や標準偏差の計算、csvファイルの読み込みによるグラフの生成など、様々な知的活動のサポートを行うことを目的とした計算サイトです。</p>
+    </div>
+    <div class="sousa-houhou">
+        <span class="box-title">（アプリ名）でできること</span>
+    <div class="gyoukan_tikadukeru">
+        <p>平均計算サイト…数値群を入力し、チェックボックスにチェックを入れることで、平均値、最頻値、分散、標準偏差の４つの値を求めることができます。</p>
+        <p>数式プロット…csvファイルを選択し、列と行を指定することで、その範囲のグラフを作製することができます。</p>
+        <p>Contact…ぜひ使用してみた感想をフォームに入力して送信してください！</p>
+    </div>
+    </div>
 
+    <footer>
+        <a href="#" id="page-top">
+            <i class="blogicon-chevron-up"></i>
+            <img class="go_top" src="static/goTop.PNG" width="100px" height="100px">
+        </a>
+    </footer>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
 {% endblock %}

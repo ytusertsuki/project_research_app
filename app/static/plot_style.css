@@ -1,8 +1,8 @@
 h1{
-    color:rgb(22, 122, 165);
+    color:rgb(165, 31, 22);
     font-family:游ゴシック;
     text-align:center;
-    background-color: rgb(134, 212, 245);
+    background-color: rgb(245, 153, 134);
 }
 
 .output_form{
@@ -16,11 +16,6 @@ textarea{
 
 .gyoukan_tikadukeru{
     line-height: 1;
-}
-
-.web_link_waku{
-    border-style:solid;
-    border-color:rgb(47, 47, 188);
 }
 
 .btn-logo{
@@ -40,8 +35,8 @@ textarea{
 
 .midashi{
     padding: 1rem 1rem;
-    border-left: 5px solid rgb(47, 47, 188);
-    background: rgb(227, 246, 255);
+    border-left: 5px solid rgb(188, 47, 47);
+    background: rgb(255, 227, 227);
     display: inline-block;
 }
 
@@ -49,7 +44,7 @@ textarea{
     position: relative;
     margin: 2em 0;
     padding: 0.5em 1em;
-    border: solid 3px rgb(47, 47, 188);
+    border: solid 3px rgb(188, 47, 47);
     border-radius: 8px;
     display: inline-block;
 }
@@ -62,7 +57,7 @@ textarea{
     line-height: 1;
     font-size: 19px;
     background: #FFF;
-    color: rgb(47, 47, 188);
+    color: rgb(188, 47, 47);
     font-weight: bold;
 }
 

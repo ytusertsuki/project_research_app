@@ -1,8 +1,8 @@
 h1{
-    color:rgb(27, 165, 22);
+    color:rgb(22, 122, 165);
     font-family:游ゴシック;
     text-align:center;
-    background-color: rgb(125, 235, 162);
+    background-color: rgb(134, 212, 245);
 }
 
 .output_form{
@@ -17,10 +17,31 @@ textarea{
 .gyoukan_tikadukeru{
     line-height: 1;
 }
+
+.web_link_waku{
+    border-style:solid;
+    border-color:rgb(47, 47, 188);
+}
+
+.btn-logo{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #5095da;
+    transition: .4s;
+}
+
+.btn-logo:hover{
+    background: #25609b;
+}
+
 .midashi{
     padding: 1rem 1rem;
-    border-left: 5px solid rgb(47, 188, 106);
-    background: rgb(227, 255, 240);
+    border-left: 5px solid rgb(47, 47, 188);
+    background: rgb(227, 246, 255);
     display: inline-block;
 }
 
@@ -28,7 +49,7 @@ textarea{
     position: relative;
     margin: 2em 0;
     padding: 0.5em 1em;
-    border: solid 3px rgb(47, 188, 106);
+    border: solid 3px rgb(47, 47, 188);
     border-radius: 8px;
     display: inline-block;
 }
@@ -41,7 +62,7 @@ textarea{
     line-height: 1;
     font-size: 19px;
     background: #FFF;
-    color: rgb(47, 188, 106);
+    color: rgb(47, 47, 188);
     font-weight: bold;
 }
 
@@ -68,9 +89,4 @@ textarea{
     border-radius: 50%;
     box-shadow: 0 2px 10px -6px rgba(0,0,0,.5), 0 3px 10px -4px rgba(0,0,0,.2);
     scroll-behavior: smooth;
-}
-
-/* valueErrorメッセージ */
-#ValueError{
-    color: red;
 }
